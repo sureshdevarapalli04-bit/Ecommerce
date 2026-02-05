@@ -20,7 +20,10 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://ecommerce-one-sepia-99.vercel.app",
+  credentials: true
+}));
 app.use(express.json());
 
 // 🔹 ROUTES
